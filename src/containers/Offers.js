@@ -5,6 +5,7 @@ import List from "../components/List";
 
 const Home = () => {
   const [offers, setOffers] = useState([]);
+  const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
     fetchData();
   }, []);
@@ -12,12 +13,13 @@ const Home = () => {
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3000");
     setOffers(response.data);
+    setIsloading(false);
   };
   return (
-    <div>
+    <>
       <SearchBar />
-      <List offers={offers} />
-    </div>
+      {isLoading ? <p>Chargement en cours</p> : <List offers={offers} />}
+    </>
   );
 };
 

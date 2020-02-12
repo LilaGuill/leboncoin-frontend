@@ -2,10 +2,10 @@
   height: 60px;
   width: 100%;
   background: white;
-  box-shadow: 0 0 10px rgba(245, 107, 42, 0);
+  box-shadow: 0 0 10px rgba(109, 109, 109, 0.2);
 }
 .container {
-  width: 1200px;
+  width: 1024px;
   margin: 0 auto;
 }
 

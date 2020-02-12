@@ -1,0 +1,42 @@
+.user {
+  border-bottom: 1px solid rgb(237, 237, 237);
+  height: 60px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+span {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(70, 112, 218);
+}
+.wrapper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+button {
+  width: 200px;
+  height: 40px;
+  overflow: none;
+  border: none;
+  background-color: #f56b2a;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

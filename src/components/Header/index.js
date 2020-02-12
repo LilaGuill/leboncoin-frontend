@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container">
         <div className="wrapper">
           <div className="wrapper-items-header">
-            <img src={logo} />
+            <img src={logo} alt="logo leboncoin" />
             <button>
               <FontAwesomeIcon icon="plus-square" className="icon-white" />
               Déposer une annonce

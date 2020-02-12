@@ -1,24 +1,26 @@
 .list {
   width: 1000px;
   min-height: 600px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 .list-item {
   display: flex;
+  flex-direction: row;
   width: 100%;
   height: 134px;
   background-color: white;
-  margin-top: 10px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(245, 107, 42, 0.1);
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(89, 89, 89, 0.1);
 }
 
 .list-image {
-  width: 200px;
+  width: 250px;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: 5px 0 0 4px;
+  background-color: rgba(181, 181, 181, 0.5);
 }
 
 .list-detail {
@@ -39,14 +41,14 @@
 }
 .price {
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
   color: #f56b2a;
 }
 .date {
   margin-left: 20px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 140%;
   color: #000000;
 }
