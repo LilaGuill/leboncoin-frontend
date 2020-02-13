@@ -39,7 +39,6 @@ const List = ({ offers }) => {
     );
   });
 
-  console.log(offers);
   return <div className="list">{offersList}</div>;
 };
 

@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 import List from "../components/List";
 import Pagination from "../components/Pagination";
 
-const Home = () => {
+const Offers = () => {
   const [offers, setOffers] = useState([]);
   const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Offers;

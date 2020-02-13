@@ -1,5 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory
+} from "react-router-dom";
+import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlusSquare,
@@ -13,22 +19,29 @@ import Signup from "./containers/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
-import SignUp from "./containers/Signup";
+
 library.add(faSearch, faPlusSquare, faUser);
 
 function App() {
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const myToken = Cookies.get("token");
+    setToken(myToken);
+  }, []);
+
   return (
     <Router>
-      <Header />
+      <Header token={token} setToken={setToken} />
       <Switch>
         <Route path="/offer/:id">
-          <Offer />
+          <Offer t />
         </Route>
         <Route path="/signin">
           <Signin />
         </Route>
         <Route path="/signup">
-          <SignUp />
+          <Signup setToken={setToken} />
         </Route>
         <Route path="/">
           <Offers />
