@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
+import Information from "../components/Information";
 
 const Signup = ({ setToken }) => {
   const [username, setUsername] = useState("");
@@ -32,45 +33,68 @@ const Signup = ({ setToken }) => {
   };
 
   return (
-    <div style={{ width: 300, height: 300 }}>
-      <div>
-        <h2>Créez un compte</h2>
+    <div className="signup-container">
+      <div className="wrapper-signup-information">
+        <Information />
+
+        <div className="signup-wrapper">
+          <h2>Créer un compte</h2>
+          <hr />
+          <form className="form-signup" onSubmit={handleSubmit}>
+            <label htmlFor="username">Pseudo *</label>
+
+            <input
+              type="text"
+              value={username}
+              placeholder="username"
+              onChange={event => {
+                setUsername(event.target.value);
+              }}
+            />
+            <label htmlFor="email">Adresse email*</label>
+            <input
+              type="email"
+              value={email}
+              onChange={event => {
+                setEmail(event.target.value);
+              }}
+            />
+            <div className="wrapper-password">
+              <div>
+                <label htmlFor="password">Mot de passe*</label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={event => {
+                    setPassword(event.target.value);
+                  }}
+                />
+              </div>
+              <div>
+                <label htmlFor="confirmPassword">
+                  Confirmer le mot de passe*
+                </label>
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={event => {
+                    setConfirmPassword(event.target.value);
+                  }}
+                />
+              </div>
+            </div>
+            <div className="condition">
+              <input type="checkbox" className="checkbox"></input>« J’accepte
+              les
+              <span> Conditions Générales de Vente</span> et
+              <span> les Conditions Générales d’Utilisation »</span>
+            </div>
+            <button className="signup-button" type="submit">
+              Créer mon Compte Personnel
+            </button>
+          </form>
+        </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          placeholder="username"
-          onChange={event => {
-            setUsername(event.target.value);
-          }}
-        />
-        <input
-          type="email"
-          value={email}
-          placeholder="adresse email"
-          onChange={event => {
-            setEmail(event.target.value);
-          }}
-        />
-        <input
-          type="password"
-          value={password}
-          placeholder="password"
-          onChange={event => {
-            setPassword(event.target.value);
-          }}
-        />
-        <input
-          type="password"
-          value={confirmPassword}
-          placeholder="confirm password"
-          onChange={event => {
-            setConfirmPassword(event.target.value);
-          }}
-        />
-        <button type="submit">Submit</button>
-      </form>
     </div>
   );
 };

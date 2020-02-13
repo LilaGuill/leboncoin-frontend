@@ -30,42 +30,40 @@ const SignIn = ({ setToken }) => {
   };
 
   return (
-    <main>
-      <div className="container-signup">
-        <h2>Connexion</h2>
-        <hr></hr>
-        <form onSubmit={handleSubmit} className="form-signup">
-          <label htmlFor="email">Adresse email</label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={event => {
-              setEmail(event.target.value);
-            }}
-          />
-          <label htmlFor="password">Mot de passe</label>
-          <input
-            type="password"
-            value={password}
-            onChange={event => {
-              setPassword(event.target.value);
-            }}
-          />
+    <div className="container-signup">
+      <h2>Connexion</h2>
+      <hr></hr>
+      <form onSubmit={handleSubmit} className="form-signup">
+        <label htmlFor="email">Adresse email</label>
+        <input
+          id="email"
+          type="email"
+          value={email}
+          onChange={event => {
+            setEmail(event.target.value);
+          }}
+        />
+        <label htmlFor="password">Mot de passe</label>
+        <input
+          type="password"
+          value={password}
+          onChange={event => {
+            setPassword(event.target.value);
+          }}
+        />
 
-          <button className="form-submit" type="submit">
-            Se connecter
-          </button>
-        </form>
-        <div className="wrapper-signup">
-          <span>Vous n'avez pas de compte ?</span>
+        <button className="form-submit" type="submit">
+          Se connecter
+        </button>
+      </form>
+      <div className="wrapper-signup">
+        <span>Vous n'avez pas de compte ?</span>
 
-          <button className="wrapper-signup-button">
-            <Link to="/signup">Creer un compte</Link>
-          </button>
-        </div>
+        <button className="wrapper-signup-button">
+          <Link to="/signup">Creer un compte</Link>
+        </button>
       </div>
-    </main>
+    </div>
   );
 };
 

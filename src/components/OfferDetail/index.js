@@ -12,7 +12,7 @@ const OfferDetail = props => {
             src="https://img5.leboncoin.fr/ad-large/4c9be52d765e65d246f941d0463e856bf34b2f73.jpg"
             alt="leboncoin"
           />
-          <div className="title">{props.title}</div>
+          <div className="offer-title">{props.title}</div>
           <div className="price">{props.price} €</div>
           <div className="date">{props.created}</div>
         </div>

@@ -27,7 +27,7 @@ const List = ({ offers }) => {
           />
           <div className="list-detail">
             <div className="detail">
-              <div className="title">{offer.title}</div>
+              <div className="offer-title">{offer.title}</div>
               <div className="price">{offer.price} €</div>
             </div>
             <div className="date">

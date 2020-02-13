@@ -5,7 +5,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlusSquare,
   faSearch,
-  faUser
+  faUser,
+  faClock,
+  faBell,
+  faEye
 } from "@fortawesome/free-solid-svg-icons";
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
@@ -15,7 +18,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
 
-library.add(faSearch, faPlusSquare, faUser);
+library.add(faSearch, faPlusSquare, faUser, faClock, faBell, faEye);
 
 function App() {
   const [token, setToken] = useState(null);
@@ -28,6 +31,7 @@ function App() {
   return (
     <Router>
       <Header token={token} setToken={setToken} />
+
       <Switch>
         <Route path="/offer/:id">
           <Offer t />
@@ -42,6 +46,7 @@ function App() {
           <Offers />
         </Route>
       </Switch>
+
       <Footer />
     </Router>
   );

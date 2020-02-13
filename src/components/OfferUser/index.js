@@ -6,7 +6,7 @@ const OfferUser = ({ user }) => {
     <>
       <div className="user">
         <h3>{user.username}</h3>
-        <span>10 annonces en lignes</span>
+        <span className="user-offers">10 annonces en lignes</span>
       </div>
       <div className="wrapper-button">
         <button>Acheter</button>
