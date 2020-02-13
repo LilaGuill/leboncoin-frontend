@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useHistory
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -38,7 +33,7 @@ function App() {
           <Offer t />
         </Route>
         <Route path="/signin">
-          <Signin />
+          <Signin setToken={setToken} />
         </Route>
         <Route path="/signup">
           <Signup setToken={setToken} />

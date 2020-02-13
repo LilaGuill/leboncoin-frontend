@@ -69,7 +69,7 @@ const Signup = ({ setToken }) => {
             setConfirmPassword(event.target.value);
           }}
         />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

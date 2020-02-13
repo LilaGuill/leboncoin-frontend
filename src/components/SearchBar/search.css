@@ -39,7 +39,7 @@ form input {
 form input::placeholder {
   color: rgb(176, 176, 176);
 }
-form button {
+form .search-button {
   margin-left: 15px;
   height: 40px;
   width: 200px;
@@ -51,7 +51,7 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
+form .search-button:hover {
   box-shadow: 0 0 10px rgba(7, 7, 7, 0.2);
 }
 .icon-grey {

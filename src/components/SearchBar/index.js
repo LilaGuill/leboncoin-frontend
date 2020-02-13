@@ -12,7 +12,7 @@ const SearchBar = () => {
             <FontAwesomeIcon icon="search" className="icon-grey" />
             <input type="text" placeholder="Que recherchez-vous ?" />
           </div>
-          <button>Rechercher</button>
+          <button className="search-button">Rechercher</button>
         </form>
       </div>
     </div>
