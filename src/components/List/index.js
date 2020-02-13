@@ -13,7 +13,8 @@ const List = ({ offers }) => {
     return (
       <Link
         key={offer._id}
-        to={`/offer/${offer._id}`}
+        // to={`/offer/${offer._id}`} les deux syntaxe fonctionnent
+        to={"/offer/" + offer._id}
         style={{ textDecoration: "none" }}
       >
         {/* ne pas mettre de point dans la variable */}

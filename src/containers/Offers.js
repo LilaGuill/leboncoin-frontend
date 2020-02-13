@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SearchBar from "../components/SearchBar";
 import List from "../components/List";
+import Pagination from "../components/Pagination";
 
 const Home = () => {
   const [offers, setOffers] = useState([]);
@@ -18,7 +19,14 @@ const Home = () => {
   return (
     <>
       <SearchBar />
-      {isLoading ? <p>Chargement en cours</p> : <List offers={offers} />}
+      {isLoading ? (
+        <p>Chargement en cours</p>
+      ) : (
+        <>
+          <List offers={offers} />
+          <Pagination pages={offers.length} />
+        </>
+      )}
     </>
   );
 };

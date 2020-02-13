@@ -8,9 +8,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
+import Signin from "./containers/Signin";
+import Signup from "./containers/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
+import SignUp from "./containers/Signup";
 library.add(faSearch, faPlusSquare, faUser);
 
 function App() {
@@ -20,6 +23,12 @@ function App() {
       <Switch>
         <Route path="/offer/:id">
           <Offer />
+        </Route>
+        <Route path="/signin">
+          <Signin />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
         <Route path="/">
           <Offers />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 import logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,10 +20,12 @@ const Header = () => {
               Rechercher
             </div>
           </div>
-          <div className="connexion">
-            <FontAwesomeIcon icon="user" className="icon-black" />
-            Se connecter
-          </div>
+          <Link to="/signin">
+            <div className="connexion">
+              <FontAwesomeIcon icon="user" className="icon-black" />
+              Se connecter
+            </div>
+          </Link>
         </div>
       </div>
     </div>

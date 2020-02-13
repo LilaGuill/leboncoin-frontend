@@ -11,7 +11,7 @@ const Offer = () => {
 
   useEffect(() => {
     fetchData(id);
-  }, []);
+  }, [id]);
 
   const fetchData = async id => {
     const response = await axios.get(`http://localhost:3000/offer/${id}`);
