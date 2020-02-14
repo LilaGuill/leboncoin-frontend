@@ -1,0 +1,86 @@
+.publish-container {
+  width: 100%;
+}
+
+.publish-form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  width: 1024px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.publish-form-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+.publish-form h2 {
+  margin: 10px auto;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid #f56b2a;
+  width: 70%;
+  height: 40px;
+  text-align: center;
+}
+
+.publish-form-form {
+  width: 70%;
+}
+
+.wrapper-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.publish-form label {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.publish-form-input-description {
+  width: 100%;
+  font-size: 14px;
+  height: 30px;
+  border: 1px solid #d9e0eb;
+
+  border-radius: 5px;
+}
+.publish-form-input-price {
+  width: 40%;
+  font-size: 14px;
+  height: 30px;
+  border: 1px solid #d9e0eb;
+  border-radius: 5px;
+}
+.sigle-eur {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.sigle-eur-span {
+  margin-left: 20px;
+}
+.publish-form textarea {
+  height: 139px;
+  width: 100%;
+  border: 1px solid #d9e0eb;
+  border-radius: 5px;
+}
+
+.publish-form button {
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #4183d7;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

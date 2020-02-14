@@ -26,7 +26,6 @@ const Signup = ({ setToken }) => {
     );
     //enregistrement du token dans les cookies
     const token = response.data.token;
-    console.log(response.data);
     Cookies.set("token", token, { expires: 7 });
     setToken(token);
     history.push("/");

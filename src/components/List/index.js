@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 import "./list.css";
 moment.lang("fr");
-console.log(moment.locale());
+moment.locale();
 
 const List = ({ offers }) => {
   const offersList = offers.map((offer, index) => {

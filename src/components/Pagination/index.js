@@ -1,18 +1,17 @@
 import React from "react";
+import "./pagination.css";
 
-const Pagination = ({ pages }) => {
-  const handlePage = i => {
-    console.log(i);
-  };
-
+const Pagination = ({ setPage, count }) => {
+  console.log(count);
   const pagination = [];
-  let page = Math.ceil(pages / 5);
+  let page = Math.ceil(count / 3);
   for (let i = 1; i <= page; i++) {
     pagination.push(
       <span
+        className="page"
         key={i}
         onClick={() => {
-          handlePage(i);
+          setPage(i);
         }}
       >
         {i}
@@ -20,8 +19,7 @@ const Pagination = ({ pages }) => {
     );
   }
 
-  console.log(pages);
-  return <div>for Pagination : {pagination}</div>;
+  return <div className="pagination">for Pagination : {pagination}</div>;
 };
 
 export default Pagination;

@@ -15,12 +15,10 @@ const SignIn = ({ setToken }) => {
       email: email,
       password: password
     };
-    console.log(body);
     const response = await axios.post("http://localhost:3000/user/login", body);
 
     //enregistrement du token dans les cookies
     const token = response.data.token;
-    console.log(response.data);
     Cookies.set("token", token, { expires: 7 });
 
     //mise a jour du state
