@@ -29,23 +29,19 @@
   justify-content: space-between;
 }
 .detail {
-  padding: 20px auto;
+  padding: 20px 0 0 20px;
 }
-
-.offer-title {
-  margin-left: 20px;
+.list-title {
   font-size: 18px;
-  line-height: 26px;
   color: #000000;
   text-transform: inherit;
 }
-.price {
-  margin-left: 20px;
-  font-size: 16px;
-  line-height: 23px;
+.list-price {
+  margin-top: 10px;
+  font-size: 18px;
   color: #f56b2a;
 }
-.date {
+.list-date {
   margin-left: 20px;
   margin-bottom: 10px;
   font-size: 14px;

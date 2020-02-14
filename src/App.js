@@ -34,7 +34,7 @@ function App() {
 
       <Switch>
         <Route path="/offer/:id">
-          <Offer t />
+          <Offer />
         </Route>
         <Route path="/signin">
           <Signin setToken={setToken} />

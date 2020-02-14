@@ -5,7 +5,9 @@
 .background-search {
   background-color: #f56b2a;
   width: 100%;
-  height: 60px;
+  height: 70px;
+  border-bottom-left-radius: 250px 50px;
+  border-bottom-right-radius: 250px 50px;
 }
 
 .search-bar {
@@ -19,7 +21,7 @@
   align-items: center;
   justify-content: center;
 }
-form {
+.search form {
   display: flex;
 }
 .input {
@@ -28,30 +30,33 @@ form {
   border-radius: 5px;
   border: none;
   background-color: rgb(248, 248, 248);
-  font-size: 14px;
+
   display: flex;
   align-items: center;
 }
-form input {
+.search form input {
+  font-size: 16px;
+  width: 220px;
   background-color: transparent;
   border: none;
 }
-form input::placeholder {
+.search form input::placeholder {
   color: rgb(176, 176, 176);
+  font-size: 1§px;
 }
-form .search-button {
+.search form .search-button {
   margin-left: 15px;
   height: 40px;
   width: 200px;
   border-radius: 5px;
   border: none;
   background-color: #5384df;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   cursor: pointer;
 }
 
-form .search-button:hover {
+.search form .search-button:hover {
   box-shadow: 0 0 10px rgba(7, 7, 7, 0.2);
 }
 .icon-grey {

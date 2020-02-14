@@ -27,10 +27,10 @@ const List = ({ offers }) => {
           />
           <div className="list-detail">
             <div className="detail">
-              <div className="offer-title">{offer.title}</div>
-              <div className="price">{offer.price} €</div>
+              <div className="list-title">{offer.title}</div>
+              <div className="list-price">{offer.price} €</div>
             </div>
-            <div className="date">
+            <div className="list-date">
               {date} à {heure}
             </div>
           </div>
