@@ -25,9 +25,9 @@ const Offers = ({ page, setPage }) => {
       {isLoading ? (
         <p>Chargement en cours</p>
       ) : (
-        <div style={{ height: 800 }}>
+        <div className="main-offers">
           <List offers={offers} />
-          <Pagination setPage={setPage} count={count} />
+          <Pagination page={page} setPage={setPage} count={count} />
         </div>
       )}
     </>

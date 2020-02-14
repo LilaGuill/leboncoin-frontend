@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
+  faChevronLeft,
+  faChevronRight,
   faPlusSquare,
   faSearch,
   faUser,
@@ -19,7 +21,16 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
 
-library.add(faSearch, faPlusSquare, faUser, faClock, faBell, faEye);
+library.add(
+  faSearch,
+  faPlusSquare,
+  faUser,
+  faClock,
+  faBell,
+  faEye,
+  faChevronLeft,
+  faChevronRight
+);
 
 function App() {
   const [token, setToken] = useState(null);
@@ -50,7 +61,6 @@ function App() {
           <Offers page={page} setPage={setPage} />
         </Route>
       </Switch>
-
       <Footer />
     </Router>
   );

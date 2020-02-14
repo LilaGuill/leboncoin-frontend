@@ -18,18 +18,18 @@ const Header = ({ setToken, token }) => {
         <div className="wrapper">
           <div className="wrapper-items-header">
             <img src={logo} alt="logo leboncoin" />
-
             <Link to="/publish">
-              <button>
+              <button className="btn-header">
                 <FontAwesomeIcon icon="plus-square" className="icon-white" />
                 Déposer une annonce
               </button>
             </Link>
-
-            <div className="recherche">
-              <FontAwesomeIcon icon="search" className="icon-black" />
-              Rechercher
-            </div>
+            <Link to="/home">
+              <div className="recherche">
+                <FontAwesomeIcon icon="search" className="icon-black" />
+                Rechercher
+              </div>
+            </Link>
           </div>
 
           <div className="connexion">
