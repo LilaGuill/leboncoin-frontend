@@ -38,15 +38,14 @@ const Signup = ({ setToken }) => {
         <Information />
 
         <div className="signup-wrapper">
-          <h2>Créer un compte</h2>
-          <hr />
-          <form className="form-signup" onSubmit={handleSubmit}>
+          <h2 className="form-signup-title">Créer un compte</h2>
+
+          <form className="form-signup-2" onSubmit={handleSubmit}>
             <label htmlFor="username">Pseudo *</label>
 
             <input
               type="text"
               value={username}
-              placeholder="username"
               onChange={event => {
                 setUsername(event.target.value);
               }}
@@ -84,8 +83,7 @@ const Signup = ({ setToken }) => {
               </div>
             </div>
             <div className="condition">
-              <input type="checkbox" className="checkbox"></input>« J’accepte
-              les
+              <input type="checkbox" className="checkbox" />« J’accepte les
               <span> Conditions Générales de Vente</span> et
               <span> les Conditions Générales d’Utilisation »</span>
             </div>
