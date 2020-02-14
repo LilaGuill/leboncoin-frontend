@@ -85,7 +85,7 @@ const PublishOffer = ({ token }) => {
             </div>
             <button type="submit">Publish</button>
           </form>
-          {/* <div>{message}</div> */}
+          <div>{message}</div>
         </div>
       </div>
     </div>

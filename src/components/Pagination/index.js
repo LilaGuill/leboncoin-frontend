@@ -2,7 +2,6 @@ import React from "react";
 import "./pagination.css";
 
 const Pagination = ({ setPage, count }) => {
-  console.log(count);
   const pagination = [];
   let page = Math.ceil(count / 3);
   for (let i = 1; i <= page; i++) {

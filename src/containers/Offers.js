@@ -5,25 +5,20 @@ import List from "../components/List";
 import Pagination from "../components/Pagination";
 
 const Offers = ({ page, setPage }) => {
-  console.log(page);
   const [offers, setOffers] = useState([]);
   const [count, setCount] = useState(0);
 
   const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("http://localhost:3000/?page=" + page);
+      setOffers(response.data.offers);
+      setCount(response.data.count);
+      setIsloading(false);
+    };
     fetchData();
-  }, []);
+  }, [page]);
 
-  const fetchData = async () => {
-    const response = await axios.get("http://localhost:3000/?page=" + page);
-
-    setOffers(response.data.offers);
-    setCount(response.data.count);
-
-    setIsloading(false);
-  };
-  console.log("data", offers);
-  console.log("count", count);
   return (
     <>
       <SearchBar />
