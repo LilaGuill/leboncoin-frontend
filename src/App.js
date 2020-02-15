@@ -10,7 +10,8 @@ import {
   faUser,
   faClock,
   faBell,
-  faEye
+  faEye,
+  faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
@@ -29,7 +30,8 @@ library.add(
   faBell,
   faEye,
   faChevronLeft,
-  faChevronRight
+  faChevronRight,
+  faShoppingCart
 );
 
 function App() {

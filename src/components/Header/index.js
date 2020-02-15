@@ -17,7 +17,9 @@ const Header = ({ setToken, token }) => {
       <div className="container">
         <div className="wrapper">
           <div className="wrapper-items-header">
-            <img src={logo} alt="logo leboncoin" />
+            <Link to="/">
+              <img src={logo} alt="logo leboncoin" />
+            </Link>
             <Link to="/publish">
               <button className="btn-header">
                 <FontAwesomeIcon icon="plus-square" className="icon-white" />

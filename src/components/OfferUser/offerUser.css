@@ -3,12 +3,13 @@
   height: 60px;
 }
 
-h3 {
+.user h3 {
   font-size: 22px;
   line-height: 26px;
   font-weight: bold;
   margin-left: 15px;
   margin-top: 15px;
+  text-transform: capitalize;
 }
 
 .user-offers {
@@ -26,7 +27,7 @@ h3 {
   justify-content: center;
   height: 70px;
 }
-button {
+.user-button {
   width: 200px;
   height: 40px;
   overflow: none;
@@ -38,5 +39,14 @@ button {
   line-height: 21px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+.user-button:hover {
+  background-color: #c25a31;
+  box-shadow: 0 0 10px rgba(109, 109, 109, 0.2);
+  transition: 0.3s;
+}
+.icon-shop {
+  font-size: 20px;
+  margin-right: 15px;
 }

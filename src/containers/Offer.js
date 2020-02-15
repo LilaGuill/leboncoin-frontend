@@ -6,6 +6,7 @@ import OfferDetail from "../components/OfferDetail";
 const Offer = () => {
   const [offer, setOffer] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [count, setCount] = useState(0);
 
   const { id } = useParams();
 
@@ -15,13 +16,19 @@ const Offer = () => {
 
   const fetchData = async id => {
     const response = await axios.get(`http://localhost:3000/offer/${id}`);
-    setOffer(response.data);
+
+    setOffer(response.data.userOffer);
+    setCount(response.data.countOffers);
     setIsLoading(false);
   };
 
   return (
     <div>
-      {isLoading ? <p>Laodin</p> : <OfferDetail {...offer}></OfferDetail>}
+      {isLoading ? (
+        <p>Laodin</p>
+      ) : (
+        <OfferDetail offer={offer} count={count}></OfferDetail>
+      )}
     </div>
   );
 };
