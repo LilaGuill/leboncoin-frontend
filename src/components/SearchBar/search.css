@@ -39,6 +39,7 @@
   width: 220px;
   background-color: transparent;
   border: none;
+  margin-right: 10px;
 }
 .search form input::placeholder {
   color: rgb(176, 176, 176);

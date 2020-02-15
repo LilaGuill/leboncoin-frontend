@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import "moment/locale/fr";
 import "./list.css";
-moment.lang("fr");
-moment.locale();
+moment.locale("fr");
 
 const List = ({ offers }) => {
   const offersList = offers.map((offer, index) => {

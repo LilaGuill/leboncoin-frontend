@@ -15,6 +15,16 @@ main {
   width: 100%;
   height: 100vh;
 }
+
+.loading {
+  width: 80%;
+  height: 200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
 .main-offers {
   min-height: 600px;
 }
@@ -222,4 +232,15 @@ footer {
   justify-content: center;
   align-items: center;
   color: white;
+}
+input {
+  padding-left: 10px;
+}
+textarea {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+button {
+  cursor: pointer;
 }

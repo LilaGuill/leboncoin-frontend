@@ -25,7 +25,7 @@ const Offer = () => {
   return (
     <div>
       {isLoading ? (
-        <p>Laodin</p>
+        <p>Chargement en cours...</p>
       ) : (
         <OfferDetail offer={offer} count={count}></OfferDetail>
       )}

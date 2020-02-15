@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { far } from "@fortawesome/free-regular-svg-icons";
 import "./information.css";
 
 const Information = () => {
@@ -8,7 +9,7 @@ const Information = () => {
       <h2 className="title">Pourquoi créer un compte ?</h2>
       <div>
         <div className="information-title">
-          <FontAwesomeIcon icon="clock" className="icon-information" />
+          <FontAwesomeIcon icon={far.faClock} className="icon-information" />
           <h5>Gagner du temps</h5>
         </div>
         <p>
@@ -19,7 +20,7 @@ const Information = () => {
       </div>
       <div>
         <div className="information-title">
-          <FontAwesomeIcon icon="bell" className="icon-information" />
+          <FontAwesomeIcon icon={far.faBell} className="icon-information" />
           <h5>Soyez les premiers informés</h5>
         </div>
         <p>
@@ -29,7 +30,7 @@ const Information = () => {
       </div>
       <div>
         <div className="information-title ">
-          <FontAwesomeIcon icon="eye" className="icon-information" />
+          <FontAwesomeIcon icon={far.faEye} className="icon-information" />
           <h5>Visibilité</h5>
         </div>
         <p>

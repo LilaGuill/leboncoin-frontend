@@ -1,8 +1,13 @@
 import React from "react";
 import OfferUser from "../OfferUser";
 import "./offerDetail.css";
+import moment from "moment";
+import "moment/locale/fr";
+moment.locale("fr");
 
 const OfferDetail = ({ offer, count }) => {
+  const date = moment(offer.created).format("L");
+  const heure = moment(offer.created).format("LT");
   return (
     <div className="container-offer">
       <div className="offer">
@@ -18,7 +23,10 @@ const OfferDetail = ({ offer, count }) => {
           <div className="description">
             <p>{offer.description}</p>
           </div>
-          <div className="date">{offer.created}</div>
+          <div className="date">
+            {" "}
+            {date} à {heure}
+          </div>
         </div>
       </div>
       <div className="wrapper-user">

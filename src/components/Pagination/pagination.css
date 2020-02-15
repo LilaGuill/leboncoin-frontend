@@ -26,12 +26,12 @@
   color: rgb(142, 145, 154);
   background-color: transparent;
 }
-.icon-grey {
+.pagination .icon-grey {
   color: rgb(142, 172, 216);
   font-size: 14px;
   cursor: pointer;
 }
 
-.icon-grey:hover {
+.pagination .icon-grey:hover {
   color: black;
 }

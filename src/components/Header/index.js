@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { far } from "@fortawesome/free-regular-svg-icons";
 import Cookies from "js-cookie";
 
 const Header = ({ setToken, token }) => {
@@ -22,7 +23,10 @@ const Header = ({ setToken, token }) => {
             </Link>
             <Link to="/publish">
               <button className="btn-header">
-                <FontAwesomeIcon icon="plus-square" className="icon-white" />
+                <FontAwesomeIcon
+                  icon={far.faPlusSquare}
+                  className="icon-white"
+                />
                 Déposer une annonce
               </button>
             </Link>
@@ -35,7 +39,7 @@ const Header = ({ setToken, token }) => {
           </div>
 
           <div className="connexion">
-            <FontAwesomeIcon icon="user" className="icon-black" />
+            <FontAwesomeIcon icon={far.faUser} className="icon-black" />
             {token ? (
               <span onClick={handleDeConnexion}>Se déconnecter</span>
             ) : (

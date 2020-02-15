@@ -5,14 +5,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faChevronLeft,
   faChevronRight,
-  faPlusSquare,
   faSearch,
-  faUser,
-  faClock,
-  faBell,
-  faEye,
   faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
+
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
 import Signin from "./containers/Signin";
@@ -22,17 +18,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
 
-library.add(
-  faSearch,
-  faPlusSquare,
-  faUser,
-  faClock,
-  faBell,
-  faEye,
-  faChevronLeft,
-  faChevronRight,
-  faShoppingCart
-);
+library.add(faSearch, faChevronLeft, faChevronRight, faShoppingCart);
 
 function App() {
   const [token, setToken] = useState(null);

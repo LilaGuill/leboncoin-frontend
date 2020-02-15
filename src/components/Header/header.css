@@ -84,6 +84,7 @@
   height: 60px;
   border-bottom: 3px solid #ffffff;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .connexion span {
   color: black;

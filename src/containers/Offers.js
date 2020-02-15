@@ -30,7 +30,7 @@ const Offers = ({ page, setPage }) => {
         setCount={setCount}
       />
       {isLoading ? (
-        <p>Chargement en cours</p>
+        <p className="loading">Chargement en cours...</p>
       ) : (
         <div className="main-offers">
           <List offers={offers} />
