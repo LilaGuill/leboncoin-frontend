@@ -17,8 +17,6 @@ const List = ({ offers }) => {
         to={"/offer/" + offer._id}
         style={{ textDecoration: "none" }}
       >
-        {/* ne pas mettre de point dans la variable */}
-
         <div className="list-item">
           <img
             className="list-image"

@@ -24,7 +24,6 @@ const OfferDetail = ({ offer, count }) => {
             <p>{offer.description}</p>
           </div>
           <div className="date">
-            {" "}
             {date} à {heure}
           </div>
         </div>

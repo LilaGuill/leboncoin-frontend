@@ -58,7 +58,7 @@ const SignIn = ({ setToken }) => {
         <span>Vous n'avez pas de compte ?</span>
 
         <button className="wrapper-signup-button">
-          <Link to="/signup">Creer un compte</Link>
+          <Link to="/signup">Créer un compte</Link>
         </button>
       </div>
     </div>

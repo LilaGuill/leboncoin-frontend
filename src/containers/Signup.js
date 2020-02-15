@@ -82,9 +82,12 @@ const Signup = ({ setToken }) => {
               </div>
             </div>
             <div className="condition">
-              <input type="checkbox" className="checkbox" />« J’accepte les
-              <span> Conditions Générales de Vente</span> et
-              <span> les Conditions Générales d’Utilisation »</span>
+              <input type="checkbox" className="checkbox" />
+              <p>
+                «J’accepte les
+                <span> Conditions Générales de Vente</span> et
+                <span> les Conditions Générales d’Utilisation.»</span>
+              </p>
             </div>
             <button className="signup-button" type="submit">
               Créer mon Compte Personnel
