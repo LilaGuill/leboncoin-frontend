@@ -43,7 +43,7 @@
 }
 .search form input::placeholder {
   color: rgb(176, 176, 176);
-  font-size: 1§px;
+  font-size: 12px;
 }
 .search form .search-button {
   margin-left: 15px;
@@ -66,4 +66,10 @@
   margin: 15px;
   font-size: 14px;
   color: rgb(150, 150, 150);
+}
+
+@media (max-width: 800px) {
+  .search-bar {
+    width: 100%;
+  }
 }

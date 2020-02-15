@@ -249,3 +249,9 @@ textarea {
 button {
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
