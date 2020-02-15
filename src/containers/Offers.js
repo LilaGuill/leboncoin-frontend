@@ -7,6 +7,7 @@ import Pagination from "../components/Pagination";
 const Offers = ({ page, setPage }) => {
   const [offers, setOffers] = useState([]);
   const [count, setCount] = useState(0);
+  const [search, setSearch] = useState("");
 
   const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
@@ -21,7 +22,13 @@ const Offers = ({ page, setPage }) => {
 
   return (
     <>
-      <SearchBar />
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+        setPage={setPage}
+        setOffers={setOffers}
+        setCount={setCount}
+      />
       {isLoading ? (
         <p>Chargement en cours</p>
       ) : (

@@ -130,3 +130,7 @@ table {
 button {
   outline: none;
 }
+
+input {
+  outline: none;
+}
