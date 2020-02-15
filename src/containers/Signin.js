@@ -32,7 +32,7 @@ const SignIn = ({ setToken }) => {
       <h2>Connexion</h2>
       <hr></hr>
       <form onSubmit={handleSubmit} className="form-signup">
-        <label htmlFor="email">Adresse email</label>
+        <label htmlFor="email">Adresse email*</label>
         <input
           id="email"
           type="email"
@@ -41,7 +41,7 @@ const SignIn = ({ setToken }) => {
             setEmail(event.target.value);
           }}
         />
-        <label htmlFor="password">Mot de passe</label>
+        <label htmlFor="password">Mot de passe*</label>
         <input
           type="password"
           value={password}

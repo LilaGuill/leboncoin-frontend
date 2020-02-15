@@ -11,6 +11,7 @@ const SearchBar = ({ search, setSearch, setOffers, setCount }) => {
     });
     setOffers(response.data.offers);
     setCount(response.data.count);
+    setSearch("");
   };
 
   return (

@@ -83,4 +83,12 @@
   border: none;
   color: white;
   cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+}
+
+.publish-form button:hover {
+  box-shadow: 0 0 10px rgba(7, 7, 7, 0.2);
+  background-color: #336699;
+  transition: 0.3s;
 }
