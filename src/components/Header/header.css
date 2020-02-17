@@ -98,4 +98,7 @@
   .container {
     width: 100%;
   }
+  .wrapper-items-header {
+    display: none;
+  }
 }

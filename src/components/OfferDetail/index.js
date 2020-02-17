@@ -6,17 +6,14 @@ import "moment/locale/fr";
 moment.locale("fr");
 
 const OfferDetail = ({ offer, count }) => {
+  console.log(offer.image);
   const date = moment(offer.created).format("L");
   const heure = moment(offer.created).format("LT");
   return (
     <div className="container-offer">
       <div className="offer">
         <div className="wrapper-offer">
-          <img
-            className="image-offer"
-            src="https://img5.leboncoin.fr/ad-large/4c9be52d765e65d246f941d0463e856bf34b2f73.jpg"
-            alt="leboncoin"
-          />
+          <img className="image-offer" src={offer.image} alt="leboncoin" />
           <div className="offer-title">{offer.title}</div>
           <div className="price">{offer.price} €</div>
 

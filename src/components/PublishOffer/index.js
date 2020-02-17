@@ -9,27 +9,31 @@ const PublishOffer = ({ token }) => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [message, setMessage] = useState("");
+  const [file, setFile] = useState();
 
   const handleSubmit = async event => {
-    const config = {
-      headers: { Authorization: `Bearer ${token}` }
-    };
-    const bodyParameters = {
-      title,
-      description,
-      price
-    };
+    const bodyParameters = { title, description, price, file };
+
+    const formData = new FormData();
+    for (const [key, value] of Object.entries(bodyParameters)) {
+      formData.append(key, value);
+    }
 
     try {
       event.preventDefault();
       if (title && description && price) {
         const response = await axios.post(
           "http://localhost:3000/offer/publish",
-          bodyParameters,
-          config
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "multipart/form-data"
+            }
+          }
         );
+        console.log(response);
 
-        setMessage(response);
         history.push("/");
       } else {
         setMessage("Veuillez remplir tous les champs");
@@ -81,7 +85,12 @@ const PublishOffer = ({ token }) => {
             </div>
             <div className="wrapper-label">
               <label htmlFor="file">Photos*</label>
-              <input type="file" />
+              <input
+                type="file"
+                onChange={event => {
+                  setFile(event.target.files[0]);
+                }}
+              />
             </div>
             <button type="submit">Publish</button>
           </form>

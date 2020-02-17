@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import logo from "../../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { far } from "@fortawesome/free-regular-svg-icons";
+
 import Cookies from "js-cookie";
+import { far } from "@fortawesome/free-regular-svg-icons";
 
 const Header = ({ setToken, token }) => {
   const handleDeConnexion = () => {

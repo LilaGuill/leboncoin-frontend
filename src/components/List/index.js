@@ -18,11 +18,7 @@ const List = ({ offers }) => {
         style={{ textDecoration: "none" }}
       >
         <div className="list-item">
-          <img
-            className="list-image"
-            src="https://img5.leboncoin.fr/ad-large/4c9be52d765e65d246f941d0463e856bf34b2f73.jpg"
-            alt="leboncoin"
-          />
+          <img className="list-image" src={offer.image} alt="leboncoin" />
           <div className="list-detail">
             <div className="detail">
               <div className="list-title">{offer.title}</div>

@@ -8,7 +8,6 @@ import {
   faSearch,
   faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
-
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
 import Signin from "./containers/Signin";
