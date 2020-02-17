@@ -1,8 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./publishOffer.css";
-import { useDropzone } from "react-dropzone";
 
 const PublishOffer = ({ token }) => {
   let history = useHistory();
@@ -94,6 +93,7 @@ const PublishOffer = ({ token }) => {
             <div className="wrapper-label">
               <label htmlFor="file">Photos*</label>
               <input
+                className="file"
                 type="file"
                 onChange={event => {
                   setFile(event.target.files[0]);
@@ -101,6 +101,7 @@ const PublishOffer = ({ token }) => {
                 }}
               />
             </div>
+
             <button type="submit">Publier</button>
           </form>
           <div className="message">{message}</div>
