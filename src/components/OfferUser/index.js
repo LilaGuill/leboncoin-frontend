@@ -8,7 +8,11 @@ const OfferUser = ({ username, count }) => {
     <>
       <div className="user">
         <h3>{username}</h3>
-        <span className="user-offers">{`${count} annonces en lignes`}</span>
+        <span className="user-offers">
+          {Number(count) === 1
+            ? `${count} annonce en ligne`
+            : `${count} annonces en ligne`}
+        </span>
       </div>
       <div className="wrapper-button">
         <button className="user-button">

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./publishOffer.css";
+import { useDropzone } from "react-dropzone";
 
 const PublishOffer = ({ token }) => {
   let history = useHistory();
@@ -12,16 +13,16 @@ const PublishOffer = ({ token }) => {
   const [file, setFile] = useState();
 
   const handleSubmit = async event => {
-    const bodyParameters = { title, description, price, file };
+    event.preventDefault();
+    if (title && description && price && file) {
+      const bodyParameters = { title, description, price, file };
 
-    const formData = new FormData();
-    for (const [key, value] of Object.entries(bodyParameters)) {
-      formData.append(key, value);
-    }
+      const formData = new FormData();
+      for (const [key, value] of Object.entries(bodyParameters)) {
+        formData.append(key, value);
+      }
 
-    try {
-      event.preventDefault();
-      if (title && description && price) {
+      try {
         const response = await axios.post(
           "http://localhost:3000/offer/publish",
           formData,
@@ -32,14 +33,14 @@ const PublishOffer = ({ token }) => {
             }
           }
         );
-        console.log(response);
+        console.log(response.message);
 
         history.push("/");
-      } else {
-        setMessage("Veuillez remplir tous les champs");
+      } catch (error) {
+        console.log(error.message);
       }
-    } catch (error) {
-      setMessage(error.message);
+    } else {
+      setMessage("Tous les champs sont obligatoires");
     }
   };
   return (
@@ -54,18 +55,22 @@ const PublishOffer = ({ token }) => {
               <input
                 className="publish-form-input-description"
                 type="text"
+                maxLength="50"
                 value={title}
                 onChange={event => {
                   setTitle(event.target.value);
+                  setMessage("");
                 }}
               />
             </div>
             <div className="wrapper-label">
               <label htmlFor="textarea">Texte de l'annonce*</label>
               <textarea
+                maxLength="350"
                 value={description}
                 onChange={event => {
                   setDescription(event.target.value);
+                  setMessage("");
                 }}
               />
             </div>
@@ -74,10 +79,13 @@ const PublishOffer = ({ token }) => {
               <div className="sigle-eur">
                 <input
                   className="publish-form-input-price"
-                  type="text"
+                  type="number"
+                  min="1"
+                  max="100000"
                   value={price}
                   onChange={event => {
                     setPrice(event.target.value);
+                    setMessage("");
                   }}
                 />
                 <span className="sigle-eur-span">€</span>
@@ -89,12 +97,13 @@ const PublishOffer = ({ token }) => {
                 type="file"
                 onChange={event => {
                   setFile(event.target.files[0]);
+                  setMessage("");
                 }}
               />
             </div>
-            <button type="submit">Publish</button>
+            <button type="submit">Publier</button>
           </form>
-          <div>{message}</div>
+          <div className="message">{message}</div>
         </div>
       </div>
     </div>

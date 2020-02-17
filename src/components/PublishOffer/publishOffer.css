@@ -92,3 +92,11 @@
   background-color: #336699;
   transition: 0.3s;
 }
+
+.message {
+  color: rgb(255, 0, 0);
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}

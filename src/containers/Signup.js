@@ -9,26 +9,31 @@ const Signup = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState("");
   let history = useHistory();
 
   const handleSubmit = async event => {
     event.preventDefault();
-    const body = {
-      username: username,
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword
-    };
+    if (username && email && password && confirmPassword) {
+      const body = {
+        username: username,
+        email: email,
+        password: password,
+        confirmPassword: confirmPassword
+      };
 
-    const response = await axios.post(
-      "http://localhost:3000/user/signup",
-      body
-    );
-    //enregistrement du token dans les cookies
-    const token = response.data.token;
-    Cookies.set("token", token, { expires: 7 });
-    setToken(token);
-    history.push("/");
+      const response = await axios.post(
+        "http://localhost:3000/user/signup",
+        body
+      );
+      //enregistrement du token dans les cookies
+      const token = response.data.token;
+      Cookies.set("token", token, { expires: 7 });
+      setToken(token);
+      history.push("/");
+    } else {
+      setMessage("Tous les champs sont obligatoires");
+    }
   };
 
   return (
@@ -47,6 +52,7 @@ const Signup = ({ setToken }) => {
               value={username}
               onChange={event => {
                 setUsername(event.target.value);
+                setMessage("");
               }}
             />
             <label htmlFor="email">Adresse email*</label>
@@ -55,16 +61,19 @@ const Signup = ({ setToken }) => {
               value={email}
               onChange={event => {
                 setEmail(event.target.value);
+                setMessage("");
               }}
             />
             <div className="wrapper-password">
               <div>
                 <label htmlFor="password">Mot de passe*</label>
                 <input
+                  autoComplete="off"
                   type="password"
                   value={password}
                   onChange={event => {
                     setPassword(event.target.value);
+                    setMessage("");
                   }}
                 />
               </div>
@@ -73,14 +82,17 @@ const Signup = ({ setToken }) => {
                   Confirmer le mot de passe*
                 </label>
                 <input
+                  autoComplete="off"
                   type="password"
                   value={confirmPassword}
                   onChange={event => {
                     setConfirmPassword(event.target.value);
+                    setMessage("");
                   }}
                 />
               </div>
             </div>
+
             <div className="condition">
               <input type="checkbox" className="checkbox" />
               <p>
@@ -89,6 +101,7 @@ const Signup = ({ setToken }) => {
                 <span> les Conditions Générales d’Utilisation.»</span>
               </p>
             </div>
+            <div className="message">{message}</div>
             <button className="signup-button" type="submit">
               Créer mon Compte Personnel
             </button>

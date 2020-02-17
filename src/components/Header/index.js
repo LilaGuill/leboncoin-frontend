@@ -38,17 +38,16 @@ const Header = ({ setToken, token }) => {
               </div>
             </Link>
           </div>
-
-          <div className="connexion">
-            <FontAwesomeIcon icon={far.faUser} className="icon-black" />
-            {token ? (
-              <span onClick={handleDeConnexion}>Se déconnecter</span>
-            ) : (
-              <Link to="/signin">
+          <Link to="/signin">
+            <div className="connexion">
+              <FontAwesomeIcon icon={far.faUser} className="icon-black" />
+              {token ? (
+                <span onClick={handleDeConnexion}>Se déconnecter</span>
+              ) : (
                 <span>Se connecter</span>
-              </Link>
-            )}
-          </div>
+              )}
+            </div>
+          </Link>
         </div>
       </div>
     </div>
