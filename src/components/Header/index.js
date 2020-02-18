@@ -7,11 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cookies from "js-cookie";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
-const Header = ({ setToken, token }) => {
+const Header = ({ setToken, token, setUsername }) => {
   const handleDeConnexion = () => {
     //deconnexion
     Cookies.remove("token");
+    Cookies.remove("username");
     setToken(null);
+    setUsername(null);
   };
 
   return (

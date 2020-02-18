@@ -33,9 +33,15 @@ function App() {
     setUsername(myUsername);
   }, []);
 
+  console.log(username);
   return (
     <Router>
-      <Header token={token} setToken={setToken} username={username} />
+      <Header
+        token={token}
+        setToken={setToken}
+        username={username}
+        setUsername={setUsername}
+      />
       <Switch>
         <Route path="/offer/:id">
           <Offer />
