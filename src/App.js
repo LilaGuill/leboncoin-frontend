@@ -16,22 +16,26 @@ import Payment from "./containers/Payment";
 import PublishOffer from "./components/PublishOffer";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Success from "./containers/Success";
 import "./App.css";
 
 library.add(faSearch, faChevronLeft, faChevronRight, faShoppingCart);
 
 function App() {
   const [token, setToken] = useState(null);
+  const [username, setUsername] = useState(null);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     const myToken = Cookies.get("token");
+    const myUsername = Cookies.get("username");
     setToken(myToken);
+    setUsername(myUsername);
   }, []);
 
   return (
     <Router>
-      <Header token={token} setToken={setToken} />
+      <Header token={token} setToken={setToken} username={username} />
       <Switch>
         <Route path="/offer/:id">
           <Offer />
@@ -46,7 +50,10 @@ function App() {
           <PublishOffer token={token} />
         </Route>
         <Route path="/payment">
-          <Payment token={token} />
+          <Payment token={token} username={username} />
+        </Route>
+        <Route path="/success">
+          <Success username={username} />
         </Route>
         <Route path="/">
           <Offers page={page} setPage={setPage} />

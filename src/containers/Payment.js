@@ -3,9 +3,8 @@ import { StripeProvider, Elements } from "react-stripe-elements";
 import CheckoutForm from "../components/CheckoutForm";
 import { useLocation, Redirect } from "react-router-dom";
 
-const Payment = ({ token }) => {
+const Payment = ({ token, username }) => {
   const location = useLocation();
-
   const { title, price, image, _id } = location.state;
 
   if (token) {
@@ -25,6 +24,7 @@ const Payment = ({ token }) => {
               price={price}
               title={title}
               token={token}
+              username={username}
             />
           </Elements>
         </StripeProvider>

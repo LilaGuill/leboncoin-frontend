@@ -22,22 +22,15 @@ const PublishOffer = ({ token }) => {
       }
 
       try {
-        const response = await axios.post(
-          "http://localhost:3000/offer/publish",
-          formData,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "multipart/form-data"
-            }
+        await axios.post("http://localhost:3000/offer/publish", formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data"
           }
-        );
-        console.log(response.message);
+        });
 
         history.push("/");
-      } catch (error) {
-        console.log(error.message);
-      }
+      } catch (error) {}
     } else {
       setMessage("Tous les champs sont obligatoires");
     }

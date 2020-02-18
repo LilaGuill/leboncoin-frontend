@@ -6,7 +6,6 @@ import "moment/locale/fr";
 moment.locale("fr");
 
 const OfferDetail = ({ offer, count }) => {
-  console.log(offer.image);
   const date = moment(offer.created).format("L");
   const heure = moment(offer.created).format("LT");
   return (

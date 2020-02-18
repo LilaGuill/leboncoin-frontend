@@ -30,6 +30,9 @@ const Signup = ({ setToken }) => {
       const token = response.data.token;
       Cookies.set("token", token, { expires: 7 });
       setToken(token);
+
+      Cookies.set("username", username, { expires: 7 });
+      setUsername(username);
       history.push("/");
     } else {
       setMessage("Tous les champs sont obligatoires");

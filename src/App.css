@@ -280,3 +280,19 @@ button {
 .price-payment {
   color: #f56b2a;
 }
+.success-btn {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #4183d7;
+  color: #ffffff;
+}
+
+.success-btn:hover {
+  box-shadow: 0 0 10px rgba(7, 7, 7, 0.2);
+  background-color: #336699;
+  transition: 0.3s;
+}

@@ -1,9 +1,11 @@
 import React from "react";
 import { injectStripe, CardElement } from "react-stripe-elements";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./checkoutForm.css";
 
-const CheckoutForm = ({ stripe, offerId, title, price, token }) => {
+const CheckoutForm = ({ stripe, offerId, title, price, token, username }) => {
+  const history = useHistory();
   return (
     <div className="payment-form">
       <CardElement />
@@ -12,11 +14,10 @@ const CheckoutForm = ({ stripe, offerId, title, price, token }) => {
         onClick={async () => {
           try {
             const stripeResponse = await stripe.createToken({
-              name: "non de l'acheteur"
+              name: username
             });
             const stripeToken = stripeResponse.token.id;
 
-            console.log(stripeToken);
             const response = await axios.post("http://localhost:3000/pay", {
               stripeToken: stripeToken,
               offerId: offerId,
@@ -24,7 +25,11 @@ const CheckoutForm = ({ stripe, offerId, title, price, token }) => {
               price: price,
               token: token
             });
-            console.log(response.data);
+
+            history.push("/success", {
+              message: response.data,
+              username: username
+            });
           } catch (error) {
             console.error("coordonnées bancaires incorrectes");
           }
