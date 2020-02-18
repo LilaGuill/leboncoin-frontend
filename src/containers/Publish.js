@@ -1,5 +1,6 @@
 import React from "react";
 import PublishOffer from "../components/PublishOffer";
+import Redirect from "react-router-dom";
 
 const Publish = ({ token }) => {
   return (
@@ -9,7 +10,7 @@ const Publish = ({ token }) => {
           <PublishOffer token={token} />
         </div>
       ) : (
-        <p>Veuillez vous connecter</p>
+        <Redirect to="/signin" />
       )}
     </div>
   );

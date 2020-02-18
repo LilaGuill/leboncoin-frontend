@@ -12,6 +12,7 @@ import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
 import Signin from "./containers/Signin";
 import Signup from "./containers/Signup";
+import Payment from "./containers/Payment";
 import PublishOffer from "./components/PublishOffer";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route path="/publish">
           <PublishOffer token={token} />
+        </Route>
+        <Route path="/payment">
+          <Payment token={token} />
         </Route>
         <Route path="/">
           <Offers page={page} setPage={setPage} />

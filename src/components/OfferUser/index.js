@@ -1,9 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./offerUser.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const OfferUser = ({ username, count }) => {
-  console.log(username, count);
+const OfferUser = ({ username, count, offer }) => {
+  const history = useHistory();
   return (
     <>
       <div className="user">
@@ -15,7 +16,12 @@ const OfferUser = ({ username, count }) => {
         </span>
       </div>
       <div className="wrapper-button">
-        <button className="user-button">
+        <button
+          className="user-button"
+          onClick={() => {
+            history.push("/payment", { ...offer });
+          }}
+        >
           <FontAwesomeIcon icon="shopping-cart" className="icon-shop" />
           Acheter
         </button>

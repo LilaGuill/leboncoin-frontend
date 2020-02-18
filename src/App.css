@@ -249,3 +249,34 @@ textarea {
 button {
   cursor: pointer;
 }
+
+/* payment */
+
+.container-payment {
+  width: 600px;
+  height: 450px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container-payment h2 {
+  font-weight: bold;
+}
+.container-payment img {
+  width: 200px;
+}
+.wrapper-payment {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 180px;
+}
+
+.price-payment {
+  color: #f56b2a;
+}

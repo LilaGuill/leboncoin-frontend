@@ -26,7 +26,11 @@ const OfferDetail = ({ offer, count }) => {
         </div>
       </div>
       <div className="wrapper-user">
-        <OfferUser username={offer.creator.account.username} count={count} />
+        <OfferUser
+          username={offer.creator.account.username}
+          count={count}
+          offer={offer}
+        />
       </div>
     </div>
   );
