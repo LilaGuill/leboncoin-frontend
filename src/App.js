@@ -33,7 +33,6 @@ function App() {
     setUsername(myUsername);
   }, []);
 
-  console.log(username);
   return (
     <Router>
       <Header
