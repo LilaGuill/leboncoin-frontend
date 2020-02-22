@@ -1,11 +1,11 @@
-<h1 align="center">Clone Leboncoin</h1>
+<h1 align="center">Leboncoin clone</h1>
 
 <p align="center">
-  <img width="500" src="https://github.com/LilaGuill/react-todo-list/blob/master/public/screen1.png" alt="capture-1">
+  <img width="500" src="https://github.com/LilaGuill/leboncoin-frontend/blob/master/public/screen.png" alt="capture-1">
 </p>
 
 <p align="center">
-  Demo:<a href="https://todolist-react-lg.netlify.com/" target="_blank"> https://todolist-react.netlify.com</a>
+  Demo:<a href="https://leboncoin-frontend.netlify.com/" target="_blank"> https://leboncoin-frontend.netlify.com/</a>
 </p>
 <p align="center">
  This project was bootstrapped with <a href=https://github.com/facebook/create-react-app. target="_blank">Create React App</a>
@@ -13,7 +13,7 @@
 
 ## Overview
 
-**Single page application, architecture CRUD**
+**Single page application, full-stack project**
 
 **Functionalities**
 
@@ -33,8 +33,8 @@
 Clone this repository :
 
 ```
-git clone https://github.com/LilaGuill/react-todo-list.git
-cd react-todo-list
+git clone https://github.com/LilaGuill/leboncoin-frontend.git
+cd leboncoin-frontend
 ```
 
 Install packages :
@@ -60,9 +60,9 @@ npm start
 - Express-formidable
 - Mongoose
 
-## React Todo List API
+## Leboncoin API
 
-<a href="https://github.com/LilaGuill/react-todo-list-api">https://github.com/LilaGuill/react-todo-list-api</a>
+<a href="https://github.com/LilaGuill/leboncoin">https://github.com/LilaGuill/leboncoin</a>
 
 ## Deployment
 
