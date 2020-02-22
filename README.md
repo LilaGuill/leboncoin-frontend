@@ -21,10 +21,10 @@
 - Authentication :
   - signup : create an account saved in mongoDB database
   - signin : verify in mongoDB database if the account is already register
-  - cookies: set or remove token from cookies
+  - cookies : set or remove token from cookies
 - Create an offer : create the new offer in mongoDB Database, save de picture with Cloudinary
-- Get detail of one offer : axios post request from Api
-- Buy the article whith Stripe (dev environment):
+- Get detail of one offer : axios request from Api
+- Buy the article whith Stripe (dev environment) :
   - crédit card number to use for demo : 4242 4242 4242 4242
   - expiration must be in the futur
   - crypto use number only
@@ -60,7 +60,7 @@ npm start
 ## Client
 
 - Hooks (useState, useEffect)
-- HTTP request with axios (Get, Post)
+- HTTP request with axios (get, post)
 - Routing with react-router-dom
 - Payment with react-stripe-element
 - Handle cookies whith js-cookies
@@ -70,6 +70,11 @@ npm start
 - Express
 - Express-formidable
 - Mongoose
+- crypto-js
+- uid2
+- stripe
+- cors
+- dotenv
 
 ## Leboncoin API
 
