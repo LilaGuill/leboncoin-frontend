@@ -13,20 +13,30 @@
 
 ## Overview
 
-**Single page application, full-stack project**
+**Web application, full-stack project**
 
 **Functionalities**
 
-- Create task : save task in mongoDB database.
-- Read : get task from MongoDB
-- Update task : update the status isChecked of the task to false or true
-- Remove task : delete task from database
-- Search task
+- Fetch offers: axios get request from Api
+- Authentication :
+  *signup : create an account saved in mongoDB database
+  *signin : verify in mongoDB database if the account is already register
+  \*cookies: set or remove token from cookies
+
+- Create an offer : create the new offer in mongoDB Database, and save de picture with Cloudinary
+- Get detail of one offer : axios post request from Api
+- Buy the article whith Stripe (dev environement):
+  - crédit card number to use form demo : 4242 4242 4242 4242
+  - expiration must be in the futur
+  - crypto use digit only
+  - code postal use digit only
+- Routing with react-router-dom
 
 **UI**
 
 - Homemade UI without framework
-- Responsive design
+
+**Dependencies**
 
 ## Running the project
 
