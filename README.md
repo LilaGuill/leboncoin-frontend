@@ -70,11 +70,11 @@ npm start
 - Express
 - Express-formidable
 - Mongoose
-- crypto-js
-- uid2
-- stripe
-- cors
-- dotenv
+- Crypto-js
+- Uid2
+- Stripe
+- Cors
+- Dotenv
 
 ## Leboncoin API
 
