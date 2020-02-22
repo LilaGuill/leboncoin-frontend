@@ -1,4 +1,4 @@
-<h1 align="center">Leboncoin clone</h1>
+<h1 align="center">Leboncoin frontend</h1>
 
 <p align="center">
   <img width="500" src="https://github.com/LilaGuill/leboncoin-frontend/blob/master/public/screen.png" alt="capture-1">
@@ -76,7 +76,7 @@ npm start
 - Cors
 - Dotenv
 
-## Leboncoin API
+## Leboncoin backend
 
 <a href="https://github.com/LilaGuill/leboncoin-backend">https://github.com/LilaGuill/leboncoin-backend</a>
 
