@@ -6,7 +6,8 @@ import axios from "axios";
 const SearchBar = ({ search, setSearch, setOffers, setCount }) => {
   const handleSubmit = async event => {
     event.preventDefault();
-    const response = await axios.post("http://localhost:3000/search", {
+
+    const response = await axios.post(`${process.env.REACT_APP_API}/search`, {
       search
     });
     setOffers(response.data.offers);

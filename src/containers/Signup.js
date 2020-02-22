@@ -23,7 +23,7 @@ const Signup = ({ setToken }) => {
       };
 
       const response = await axios.post(
-        "http://localhost:3000/user/signup",
+        `${process.env.REACT_APP_API}/user/signup`,
         body
       );
       //enregistrement du token dans les cookies

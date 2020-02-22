@@ -22,12 +22,16 @@ const PublishOffer = ({ token }) => {
       }
 
       try {
-        await axios.post("http://localhost:3000/offer/publish", formData, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data"
+        await axios.post(
+          `${process.env.REACT_APP_API}/offer/publish`,
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "multipart/form-data"
+            }
           }
-        });
+        );
 
         history.push("/");
       } catch (error) {}

@@ -17,19 +17,24 @@ const SignIn = ({ setToken }) => {
         email: email,
         password: password
       };
-      const response = await axios.post(
-        "http://localhost:3000/user/login",
-        body
-      );
+      try {
+        const response = await axios.post(
+          `${process.env.REACT_APP_API}/user/login`,
+          body
+        );
 
-      //enregistrement du token dans les cookies
-      const token = response.data.token;
-      Cookies.set("token", token, { expires: 7 });
+        //enregistrement du token dans les cookies
+        const token = response.data.token;
+        Cookies.set("token", token, { expires: 7 });
 
-      //mise a jour du state
-      setToken(token);
-      //redirection vers la page home
-      history.push("/");
+        //mise a jour du state
+        setToken(token);
+        //redirection vers la page home
+        history.push("/");
+      } catch (error) {
+        history.push("/signup");
+        console.error(error.message);
+      }
     } else {
       setMessage("Veuillez indiquer votre email et mot de passe ");
     }

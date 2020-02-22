@@ -12,19 +12,22 @@ const CheckoutForm = ({ stripe, offerId, title, price, token, username }) => {
       <button
         className="btn-payment"
         onClick={async () => {
-          try {
-            const stripeResponse = await stripe.createToken({
-              name: username
-            });
-            const stripeToken = stripeResponse.token.id;
+          const stripeResponse = await stripe.createToken({
+            name: username
+          });
 
-            const response = await axios.post("http://localhost:3000/pay", {
-              stripeToken: stripeToken,
-              offerId: offerId,
-              title: title,
-              price: price,
-              token: token
-            });
+          try {
+            const stripeToken = stripeResponse.token.id;
+            const response = await axios.post(
+              `${process.env.REACT_APP_API}/pay`,
+              {
+                stripeToken: stripeToken,
+                offerId: offerId,
+                title: title,
+                price: price,
+                token: token
+              }
+            );
 
             history.push("/success", {
               message: response.data,

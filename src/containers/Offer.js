@@ -15,7 +15,9 @@ const Offer = () => {
   }, [id]);
 
   const fetchData = async id => {
-    const response = await axios.get(`http://localhost:3000/offer/${id}`);
+    const response = await axios.get(
+      `${process.env.REACT_APP_API}/offer/${id}`
+    );
 
     setOffer(response.data.userOffer);
     setCount(response.data.countOffers);

@@ -3,6 +3,7 @@ import axios from "axios";
 import SearchBar from "../components/SearchBar";
 import List from "../components/List";
 import Pagination from "../components/Pagination";
+import Loading from "../components/Loading";
 
 const Offers = ({ page, setPage }) => {
   const [offers, setOffers] = useState([]);
@@ -12,7 +13,9 @@ const Offers = ({ page, setPage }) => {
   const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/?page=" + page);
+      const response = await axios.get(
+        `${process.env.REACT_APP_API}/?page=${page}`
+      );
       setOffers(response.data.offers);
       setCount(response.data.count);
       setIsloading(false);
@@ -30,7 +33,7 @@ const Offers = ({ page, setPage }) => {
         setCount={setCount}
       />
       {isLoading ? (
-        <p className="loading">Chargement en cours...</p>
+        <Loading />
       ) : (
         <div className="main-offers">
           <List offers={offers} />
