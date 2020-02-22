@@ -17,7 +17,7 @@
 
 **Functionalities**
 
-- Fetch offers : axios request from Api https://github.com/LilaGuill/leboncoin
+- Fetch offers : axios request from Api https://github.com/LilaGuill/leboncoin-backend
 - Authentication :
   - signup : create an account saved in mongoDB database
   - signin : verify in mongoDB database if the account is already register
@@ -78,7 +78,7 @@ npm start
 
 ## Leboncoin API
 
-<a href="https://github.com/LilaGuill/leboncoin">https://github.com/LilaGuill/leboncoin</a>
+<a href="https://github.com/LilaGuill/leboncoin-backend">https://github.com/LilaGuill/leboncoin-backend</a>
 
 ## Deployment
 
