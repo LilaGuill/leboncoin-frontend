@@ -17,12 +17,11 @@
 
 **Functionalities**
 
-- Fetch offers: axios get request from Api
+- Fetch offers : axios get request from Api https://github.com/LilaGuill/leboncoin
 - Authentication :
-  *signup : create an account saved in mongoDB database
-  *signin : verify in mongoDB database if the account is already register
-  \*cookies: set or remove token from cookies
-
+  -signup : create an account saved in mongoDB database
+  -signin : verify in mongoDB database if the account is already register
+  -cookies: set or remove token from cookies
 - Create an offer : create the new offer in mongoDB Database, and save de picture with Cloudinary
 - Get detail of one offer : axios post request from Api
 - Buy the article whith Stripe (dev environement):
