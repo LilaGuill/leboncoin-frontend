@@ -26,7 +26,6 @@ const SignIn = ({ setToken }) => {
         //enregistrement du token dans les cookies
         const token = response.data.token;
         Cookies.set("token", token, { expires: 7 });
-
         //mise a jour du state
         setToken(token);
         //redirection vers la page home
