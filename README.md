@@ -17,18 +17,18 @@
 
 **Functionalities**
 
-- Fetch offers : axios request from Api https://github.com/LilaGuill/leboncoin-backend.git
+- Fetch offers : axios request from API https://github.com/LilaGuill/leboncoin-backend.git
 - Authentication :
   - signup : create an account saved in mongoDB database
   - signin : verify in mongoDB database if the account is already register
   - cookies : set or remove token from cookies
-- Create an offer : create the new offer in mongoDB Database, save de picture with Cloudinary
-- Get detail of one offer : axios request from Api
-- Buy the article whith Stripe (dev environment) :
+- Create an offer : create the new offer in mongoDB database, save de picture with Cloudinary
+- Get detail of one offer : axios request from API
+- Buy the item whith Stripe (dev environment) :
   - crédit card number to use for demo : 4242 4242 4242 4242
   - expiration must be in the futur
-  - crypto use number only
-  - code postal use number only
+  - crypto must be a number
+  - code postal must be a number
 
 **UI**
 
@@ -59,6 +59,7 @@ npm start
 
 ## Client
 
+- React
 - Hooks (useState, useEffect)
 - HTTP request with axios (get, post)
 - Routing with react-router-dom
@@ -67,6 +68,7 @@ npm start
 
 ## Server
 
+- Node.js
 - Express
 - Express-formidable
 - Mongoose
