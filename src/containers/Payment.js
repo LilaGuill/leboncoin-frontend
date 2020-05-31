@@ -17,7 +17,7 @@ const Payment = ({ token, username }) => {
           <div className="price-payment">{price} €</div>
         </div>
         <h2>Vos coordonnées bancaires</h2>
-        <StripeProvider apiKey="pk_test_JedL8LU0vuAnijABArLhGjcd">
+        <StripeProvider apiKey={process.env.REACT_APP_STRIPE_KEY}>
           <Elements>
             <CheckoutForm
               offerId={_id}
