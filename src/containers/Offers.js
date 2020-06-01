@@ -16,6 +16,7 @@ const Offers = ({ page, setPage }) => {
       const response = await axios.get(
         `${process.env.REACT_APP_API}/?page=${page}`
       );
+
       setOffers(response.data.offers);
       setCount(response.data.count);
       setIsloading(false);
