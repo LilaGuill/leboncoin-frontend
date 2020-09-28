@@ -1,11 +1,23 @@
-import React from "react";
-import { StripeProvider, Elements } from "react-stripe-elements";
-import CheckoutForm from "../components/CheckoutForm";
-import { useLocation, Redirect } from "react-router-dom";
+import React from "react"
+import { StripeProvider, Elements } from "react-stripe-elements"
+import CheckoutForm from "../components/CheckoutForm"
+import { useLocation, Redirect } from "react-router-dom"
+import { useState } from "react"
+import { useEffect } from "react"
 
 const Payment = ({ token, username }) => {
-  const location = useLocation();
-  const { title, price, image, _id } = location.state;
+  const [stripeApi, setStripeApi] = useState(null)
+  const location = useLocation()
+
+  const { title, price, image, _id } = location.state
+
+  useEffect(() => {
+    setStripeApi(process.env.REACT_APP_STRIPE_KEY)
+
+    return () => {
+      setStripeApi(null)
+    }
+  }, [])
 
   if (token) {
     return (
@@ -17,7 +29,7 @@ const Payment = ({ token, username }) => {
           <div className="price-payment">{price} €</div>
         </div>
         <h2>Vos coordonnées bancaires</h2>
-        <StripeProvider apiKey={process.env.REACT_APP_STRIPE_KEY}>
+        <StripeProvider apiKey={stripeApi}>
           <Elements>
             <CheckoutForm
               offerId={_id}
@@ -29,10 +41,10 @@ const Payment = ({ token, username }) => {
           </Elements>
         </StripeProvider>
       </div>
-    );
+    )
   } else {
-    return <Redirect to="/signin" />;
+    return <Redirect to="/signin" />
   }
-};
+}
 
-export default Payment;
+export default Payment
